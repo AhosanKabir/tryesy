@@ -42,8 +42,8 @@ body {
   font-weight: 400;
   background-color: var(--bg-deepNavyBlue);
   color: var(--text-white);
-  /* background-image: url('../img/background.png');
-  background-size: cover; */
+  background-image: url('../img/background.png');
+  background-size: cover;
 }
 
 *::before,
