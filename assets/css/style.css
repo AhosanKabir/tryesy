@@ -1259,6 +1259,9 @@ header {
 
 /* small screen :320px. */
 @media (max-width: 767px) {
+  .team_section {
+    padding: 75px 0;
+  }
   .team__showAll {
     min-height: 300px;
   }
@@ -1269,6 +1272,36 @@ client_section Styles
 ----------------------------------------------*/
 .client_section {
   background: #171b23;
+  position: relative;
+}
+
+.vedeo_wrapper {
+  position: absolute;
+  right: 0;
+  max-width: 50%;
+  bottom: 0;
+  top: 0;
+}
+.vedeo_thumb {
+  width: 100%;
+  height: 100%;
+}
+
+.vedeo_thumb img {
+  height: 100%;
+}
+
+.vbox_item {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vbox_item img {
+  width: 100px;
+  height: 100px;
 }
 
 .client_wrapper {
@@ -1355,6 +1388,94 @@ client_section Styles
 
 .owl-carousel .owl-dot.active {
   background: var(--bg-red);
+}
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .client_wrapper {
+    padding: 64px 0;
+  }
+  .vedeo_thumb img {
+    object-fit: cover;
+  }
+}
+
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .client_wrapper {
+    padding: 56px 0;
+  }
+  .vedeo_wrapper {
+    position: relative;
+    max-width: 100%;
+  }
+  .client_wrapper {
+    text-align: center;
+  }
+  .client_wrapper--header .main_header {
+    margin-inline: auto;
+  }
+  .client__carousel {
+    margin-inline: auto;
+  }
+
+  .client_section
+    .owl-carousel
+    .owl-item
+    .client__single--carousel
+    img.review_img {
+    margin-inline: auto;
+  }
+
+  .client__carousel p {
+    margin-inline: auto;
+  }
+  .client__details {
+    justify-content: center;
+  }
+
+  .owl-carousel .owl-dots {
+    justify-content: center;
+  }
+}
+
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .client_wrapper {
+    padding: 56px 0;
+  }
+  .vedeo_wrapper {
+    position: relative;
+    max-width: 100%;
+  }
+  .client_wrapper {
+    text-align: center;
+  }
+  .client_wrapper--header .main_header {
+    margin-inline: auto;
+  }
+  .client__carousel {
+    margin-inline: auto;
+  }
+
+  .client_section
+    .owl-carousel
+    .owl-item
+    .client__single--carousel
+    img.review_img {
+    margin-inline: auto;
+  }
+
+  .client__carousel p {
+    margin-inline: auto;
+  }
+  .client__details {
+    justify-content: center;
+  }
+
+  .owl-carousel .owl-dots {
+    justify-content: center;
+  }
 }
 
 /*----------------------------------------------

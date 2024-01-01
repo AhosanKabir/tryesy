@@ -28,4 +28,11 @@
     nav: false,
     dots: true
   });
+
+  // vedeo popup
+  new VenoBox({
+    selector: ".my-link",
+  });
+
+
 })(jQuery);
