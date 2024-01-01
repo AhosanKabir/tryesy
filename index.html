@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="assets/css/venobox.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+
+        <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
     </head>
     <body>
 
@@ -521,22 +523,22 @@
             <div class="container">
                 <div class="count_wrapper">
                     <div class="single_count">
-                        <span>45+</span>
+                        <span class="counter">45+</span>
                         <p>Realized Projects</p>
                     </div>
 
                     <div class="single_count">
-                        <span>16+</span>
+                        <span class="counter">16+</span>
                         <p>Years experiences</p>
                     </div>
 
                     <div class="single_count">
-                        <span>96+</span>
+                        <span class="counter">96+</span>
                         <p>Happy customers</p>
                     </div>
 
                     <div class="single_count">
-                        <span>14+ </span>
+                        <span class="counter">14+ </span>
                         <p>trusted partners</p>
                     </div>
                 </div>
@@ -1073,6 +1075,31 @@
         </div>
     </footer>
 
+        <script>
+            const counterUp = window.counterUp.default;
+        
+            const callback = entries => {
+                entries.forEach(entry => {
+                    const el = entry.target;
+                    if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+                        counterUp(el, {
+                            duration: 2000,
+                            delay: 16,
+                        });
+                        el.classList.add('is-visible');
+                    }
+                });
+            };
+        
+            const IO = new IntersectionObserver(callback, { threshold: 1 });
+        
+            // Select all elements with class 'counter' and observe each one of them
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                IO.observe(counter);
+            });
+        </script>
+        
     
 		<!-- JS here --> 
         <script src="assets/js/jquery-3.4.1.min.js"></script>
